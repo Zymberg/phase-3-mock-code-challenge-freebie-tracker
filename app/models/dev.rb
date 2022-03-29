@@ -6,7 +6,7 @@ class Dev < ActiveRecord::Base
     self.freebies.any? do |freebie|
       freebie.item_name == item_name
     end
-  end
+  
 
   def give_away(freebie, dev)
     freebie.update(dev: dev) unless freebie.dev != self
